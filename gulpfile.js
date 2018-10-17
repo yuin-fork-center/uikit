@@ -24,7 +24,7 @@ gulp.task('build:css', function () {
         gulp.src(paths.css[i])
             .pipe(cssmin())
             .pipe(rename(dist.css[i]))
-            .pipe(gulp.dest('css/'));
+            .pipe(gulp.dest('./'));
     }
 });
 
@@ -34,7 +34,7 @@ gulp.task('build:js', function() {
             .pipe(jshint())
             .pipe(uglify())
             .pipe(rename(dist.js[i]))
-            .pipe(gulp.dest('js/'));
+            .pipe(gulp.dest('./'));
     }
 });
 
